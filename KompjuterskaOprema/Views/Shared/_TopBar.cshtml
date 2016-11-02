@@ -1,0 +1,58 @@
+﻿@using KompjuterskaOprema.Models
+@using MVC.Helper
+@using KompjuterskaOprema.Helper
+@{
+    Korisnici k = @Autentifikacija.GetLogiraniKorisnik(Context);
+}
+<link href="~/AdminTemplate/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/pixel-admin.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/widgets.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/rtl.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/themes.css" rel="stylesheet" type="text/css">
+<div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+
+    <div class="navbar-inner">
+        <div class="navbar-header">
+
+            <a class="navbar-brand">
+                Kompjuterska Oprema
+            </a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+
+        </div>
+
+        <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+            <div>
+                <div class="right clearfix">
+
+                    <ul class="nav navbar-nav pull-right right-navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                <span>@k.Ime @k.Prezime - <span class="text-default">@k.KorisnickoIme</span></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="hide"><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+                                <li class="divider hide"></li>
+                                <li><a href="@Url.Action("Logout", "Login", new {area = ""})"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-2.1.3.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/AdminTemplate/javascripts/pixel-admin.js"></script>
+<script src="~/AdminTemplate/javascripts/libs/jquery-datatables-1.10.0/datatables.bootstrap3.js"></script>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
