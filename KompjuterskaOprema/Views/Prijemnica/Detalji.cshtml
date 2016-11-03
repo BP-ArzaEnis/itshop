@@ -1,0 +1,48 @@
+﻿@model  KompjuterskaOprema.Controllers.PrijemnicaController.DetaljiVM
+@{
+    Layout = null;
+}
+
+<h3 style="color:darkcyan">Detalji prijemnice</h3>
+<div class="row">
+    <div class="col-md-4">
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+
+                    <th>Artikal</th>
+                    <th>Jedinična cijena </th>
+                    <th>Količina</th>
+                    <th>Ukupno</th>
+
+
+
+                </tr>
+            </thead>
+
+            @foreach (var x in Model.prijemnicaStavke)
+            {
+                <tr>
+
+                 
+             
+
+
+
+                    @foreach (var z in Model.artikli)
+                    {
+                        if (z.Id == x.ArtikalId)
+                        {
+                            <td> @z.Naziv</td>
+                        }
+                    }
+
+                    <td>@x.JedinicnaCijena KM</td>
+                    <td>@x.Kolicina</td>
+                    <td>@(x.Kolicina*x.JedinicnaCijena) KM</td>
+            </tr>
+            }
+        </table>
+    </div>
+</div>

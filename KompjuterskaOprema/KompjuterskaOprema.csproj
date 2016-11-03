@@ -703,6 +703,7 @@
     <Content Include="Views\Prijemnica\PrijemnicaDodaj.cshtml" />
     <Content Include="Views\Prijemnica\Index.cshtml" />
     <Content Include="Views\Prijemnica\_ViewStart.cshtml" />
+    <Content Include="Views\Prijemnica\Detalji.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -36,6 +36,24 @@ namespace KompjuterskaOprema.Controllers
             };
             return View("Index", model);
         }
+        public class DetaljiVM
+        {
 
+            public List<Artikli> artikli { get; set; }
+            public List<PrijemnicaStavke> prijemnicaStavke { get; set; }
+
+        }
+        public ActionResult Detalji(int Id)
+        {
+      
+            var model = new DetaljiVM
+            {
+               prijemnicaStavke= ctx.PrijemnicaStavke.Where(x=>x.PrijemnicaId== Id).ToList(),
+                artikli= ctx.Artikli.ToList()
+
+            };
+
+            return View(model);
+        }
     }
 }
