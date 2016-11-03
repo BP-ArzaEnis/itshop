@@ -117,6 +117,7 @@
     <Compile Include="Controllers\KorisnikController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MeniController.cs" />
+    <Compile Include="Controllers\PrijemnicaController.cs" />
     <Compile Include="DAL\MojContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -699,6 +700,9 @@
     <Content Include="Views\Korisnik\Index.cshtml" />
     <Content Include="Views\Korisnik\_ViewStart.cshtml" />
     <Content Include="Views\ViewStart.cshtml" />
+    <Content Include="Views\Prijemnica\PrijemnicaDodaj.cshtml" />
+    <Content Include="Views\Prijemnica\Index.cshtml" />
+    <Content Include="Views\Prijemnica\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,54 @@
+﻿@model KompjuterskaOprema.Controllers.PrijemnicaController.IndexVM
+
+<br />
+
+<div class="form-group">
+    <label class="control-label">Broj prijemnica </label>
+    <label style="color: palevioletred">@Model.broj</label>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>Broj prijemnice</th>
+            <th>Datum </th>
+            
+            <th>Dobavljač</th>
+      
+
+
+
+        </tr>
+    </thead>
+
+    @foreach (var x in Model.prijemnice)
+    {
+        <tr>
+
+            <td>#@x.Id</td>
+            <td>@x.Datum.ToString("dd-MM-yyyy")</td>
+         
+     
+               
+                @foreach (var z in Model.dobavljaci)
+                {
+                    if (z.Id == x.DobavljacId)
+                    {
+                    <td> @z.Naziv</td>
+                    }
+                }
+           
+
+        
+            <td>@Ajax.ActionLink("Detalji", "Detalji", new { Id = @x.Id }, new AjaxOptions { UpdateTargetId = "div" }, new { @class = "btn btn-primary btn-sm" })
+</td>
+
+        </tr>
+    }
+</table>
+<br />
+<div id="div"></div>
+
+

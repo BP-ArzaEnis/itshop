@@ -10,12 +10,12 @@ namespace KompjuterskaOprema.Models
     {
         public int Id { get; set; }
         public DateTime Datum { get; set; }
-        public double JedinicnaCijena { get; set; }
+
 
         public int? DobavljacId { get; set; }
         public Dobavljaci Dobavljac { get; set; }
 
-        public int? KorinsikId { get; set; }
+        public int? KorisnikId { get; set; }
         public Korisnici Korisnik { get; set; }
     }
 }

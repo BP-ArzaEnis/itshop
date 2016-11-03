@@ -6,6 +6,17 @@
 
 }
 
+ <!-- Open Sans font from Google CDN -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+<!-- Pixel Admin's stylesheets -->
+<link href="~/AdminTemplate/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/pixel-admin.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/widgets.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/rtl.css" rel="stylesheet" type="text/css">
+<link href="~/AdminTemplate/stylesheets/themes.css" rel="stylesheet" type="text/css">
+
+    <
 
 
 <!DOCTYPE html>
@@ -14,7 +25,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hotel Studentikus - Upravnik</title>
+    <title>Kompjuterska oprema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- Open Sans font from Google CDN -->
@@ -42,9 +53,9 @@
 
             <div id="main-menu-inner">
                 <ul class="navigation">
-                    @if (korisnik.Ime == "Arza")
+                    @if (korisnik.Id !=0)
                     {
-                        @Html.Partial("~/Views/Shared/_Korisnik.cshtml")
+                        @Html.Partial("_Korisnik")
 
                     }
 
