@@ -8,6 +8,12 @@ namespace KompjuterskaOprema.Models
 {
     public class Prijemnice:IEntity
     {
+         public Prijemnice()
+        {
+        
+            this.PrijemnicaStavke = new HashSet<PrijemnicaStavke>();
+        }
+    
         public int Id { get; set; }
         public DateTime Datum { get; set; }
 
@@ -17,5 +23,7 @@ namespace KompjuterskaOprema.Models
 
         public int? KorisnikId { get; set; }
         public Korisnici Korisnik { get; set; }
+
+        public virtual ICollection<PrijemnicaStavke> PrijemnicaStavke { get; set; }
     }
 }

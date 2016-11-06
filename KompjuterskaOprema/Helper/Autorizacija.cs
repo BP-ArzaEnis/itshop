@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using KompjuterskaOprema.Models;
+using KompjuterskaOprema;
 
 namespace MVC.Helper
 {
@@ -16,6 +17,12 @@ namespace MVC.Helper
             {
                 filterContext.HttpContext.Response.Redirect("/Login");
                 return;
+            }
+            else
+            {
+                GlobalHelp.prijavljeniKorisnik = k;
+                filterContext.HttpContext.Response.Redirect("/Meni");
+            
             }
             filterContext.HttpContext.Response.Redirect("/Meni");
         }

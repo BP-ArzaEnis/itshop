@@ -33,6 +33,7 @@ namespace KompjuterskaOprema.Controllers
             {
                 Autentifikacija.PokreniNovuSesiju(k, HttpContext, (zapamti == "on"));
                 Korisnici korisnik = Autentifikacija.GetLogiraniKorisnik(HttpContext);
+                GlobalHelp.prijavljeniKorisnik = Autentifikacija.GetLogiraniKorisnik(HttpContext);
 
                return RedirectToAction("Index", "Korisnik", new { });
             }
@@ -43,6 +44,8 @@ namespace KompjuterskaOprema.Controllers
         public ActionResult Logout()
 
         {
+            GlobalHelp.AktivnePrijemnice = null;
+            GlobalHelp.prijavljeniKorisnik = null;
             Autentifikacija.PokreniNovuSesiju(null, HttpContext, true);
             return Redirect("/Meni");
         }

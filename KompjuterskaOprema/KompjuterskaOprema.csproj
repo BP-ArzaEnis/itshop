@@ -122,6 +122,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalHelp.cs" />
     <Compile Include="Helper\Autentifikacija.cs" />
     <Compile Include="Helper\Autorizacija.cs" />
     <Compile Include="Helper\IEntity.cs" />
@@ -704,6 +705,7 @@
     <Content Include="Views\Prijemnica\Index.cshtml" />
     <Content Include="Views\Prijemnica\_ViewStart.cshtml" />
     <Content Include="Views\Prijemnica\Detalji.cshtml" />
+    <Content Include="Views\Prijemnica\Stavke.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

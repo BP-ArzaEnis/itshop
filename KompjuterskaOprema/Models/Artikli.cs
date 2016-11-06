@@ -12,5 +12,6 @@ namespace KompjuterskaOprema.Models
         public string Naziv { get; set; }
         public int KataloskiBroj { get; set; }
         public string Opis { get; set; }
+        public double Cijena { get; set; }
     }
 }
